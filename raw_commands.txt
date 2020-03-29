@@ -1,0 +1,40 @@
+UUID = 8f6a982d-6332-4b44-9e85-a264b656595c
+
+Guides
+
+https://forum.odroid.com/viewtopic.php?t=28974#p206351
+https://www.armbian.com/odroid-hc1/#kernels-archive-all
+https://forum.openmediavault.org/index.php?thread/28789-installing-omv5-on-raspberry-pi-s-armbian-sbc-s-i386-32-bit-platforms/
+
+
+Commands
+
+fdisk /dev/sda
+p
+d
+n
+w
+mkfs.ext4 /dev/sda1
+mount /dev/sda1 /mnt
+time tar --one-file-system -cpf - / | (cd /mnt && tar -xpf -)
+lsblk -f
+[COPY UUID FROM /dev/sda1]
+nano /boot/armbianEnv.txt
+rootdev=UUID=[NEUE UUID]
+[CTRL+X]
+nano /etc/fstab
+[REPLACE THE UUID]
+sudo reboot
+df
+sudo apt-get update
+sudo apt-get upgrade
+
+FINALISING
+sudo nano /etc/rc.local
+echo none > /sys/class/leds/blue\:heartbeat/trigger
+
+nano /etc/openmediavault/config.xml
+[CHANGE DATA PATH]
+omv-mkconf fstab
+
+
