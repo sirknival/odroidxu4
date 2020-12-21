@@ -23,6 +23,9 @@ Open a CMD and type
 ```ssh root@192.168.0.???```  
 and enter the password ***1234***. Now you're forced to change the password. Next, it is required to create a new user.   
 
+## Establish automatic ssh login
+Create a file using ```nano .ssh/authorized_keys``` and paste the public key from your host computer into this file. You will find your rsa-public keys in the folder ```.ssh\id_rsa.pub``` 
+
 ## Setting the SSD up
 To create a partion for the os and a partition for all the data enter the command  
 ```fdisk /dev/sda``` 
