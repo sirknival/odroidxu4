@@ -117,8 +117,9 @@ Note: During the last install, an error occured: Package ntp not installed. To f
 
 ## Installing OMV-Extras
 Install from command line as root. If you are not root already, change to root first:
-``` sudo su -
- wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
+```
+sudo su -
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
  ```
 
 FINISHED!
