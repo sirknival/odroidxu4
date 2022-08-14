@@ -17,6 +17,7 @@ This guide is based on the following instuctions:
 ## Write Image to SD-Card 
 Download Armbian-Image and write it to the SD-Card eg. with Etcher    
 [Armbian Images](https://www.armbian.com/odroid-hc1/#kernels-archive-all "armbian.org")
+
 [Armbian HC1 Download](https://www.armbian.com/odroid-xu4/)
 
 ## First login
