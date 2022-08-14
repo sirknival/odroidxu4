@@ -77,7 +77,8 @@ deb http://packages.openmediavault.org/public shaitan main
 ## developers as a service to OpenMediaVault users.
 # deb http://packages.openmediavault.org/public shaitan partner
 # deb http://downloads.sourceforge.net/project/openmediavault/packages shaitan partner
-EOF```
+EOF
+```
 
 ```export LANG=C.UTF-8
 export DEBIAN_FRONTEND=noninteractive
@@ -93,7 +94,8 @@ apt-get --yes --auto-remove --show-upgraded \
     --option DPkg::Options::="--force-confold" \
     install openmediavault-keyring openmediavault
 omv-confdbadm populate
-cat /etc/issue```
+cat /etc/issue
+```
 
 ### Legacy (OMV 5)
 OMV can be installed using a preconfigured script. Excecute the command 
