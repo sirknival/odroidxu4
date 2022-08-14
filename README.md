@@ -17,6 +17,7 @@ This guide is based on the following instuctions:
 ## Write Image to SD-Card 
 Download Armbian-Image and write it to the SD-Card eg. with Etcher    
 [Armbian Images](https://www.armbian.com/odroid-hc1/#kernels-archive-all "armbian.org")
+[Armbian HC1 Download](https://www.armbian.com/odroid-xu4/)
 
 ## First login
 Open a CMD and type  
@@ -25,6 +26,9 @@ and enter the password ***1234***. Now you're forced to change the password. Nex
 
 ## Establish automatic ssh login
 Create a file using ```nano .ssh/authorized_keys``` and paste the public key from your host computer into this file. You will find your rsa-public keys in the folder ```.ssh\id_rsa.pub``` 
+
+## Update Armbian Config
+For HC1 Armbian provides specially optimized config (for kernel 4.14.y or higher) which has to be applied manually. This results in shorter boot time and lower consumption. Run armbian-config utility and go to section system -> DTB and select optimized board configuration for Odroid HC1.
 
 ## Setting the SSD up
 To create a partion for the os and a partition for all the data enter the command  
