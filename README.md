@@ -61,6 +61,12 @@ Save using CTRL+X. Next, update the UUID in the fstab file using
  ```nano /etc/fstab```  
  In this file, simply replace the one and only UUID with the new one. Save and close. To test, where the changes where successful, just reboot if the system. If everything works, you're fine. To proof it, you can use the ```df``` command
 
+## Disable blue heartbeat LED
+To disable the blue heartbeat led of the odroid HC1 board create an entry in ***rc.local***
+```sudo nano /etc/rc.local```  
+Paste the following line at the end of the file  
+```echo none > /sys/class/leds/blue\:heartbeat/trigger``` 
+
 ## Updating the system
 First update and upgrade the system using  
 ```sudo apt-get update```  
@@ -109,12 +115,11 @@ This will download and install openmediavault 4.
 Note: During the last install, an error occured: Package ntp not installed. To fix this error simply type  
 ```sudo apt-get install ntp```
 
-## Disable blue heartbeat LED
-To disable the blue heartbeat led of the odroid HC1 board create an entry in ***rc.local***
-```sudo nano /etc/rc.local```  
-Paste the following line at the end of the file  
-```echo none > /sys/class/leds/blue\:heartbeat/trigger```  
-
+## Installing OMV-Extras
+Install from command line as root. If you are not root already, change to root first:
+``` sudo su -
+ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
+ ```
 
 FINISHED!
 
